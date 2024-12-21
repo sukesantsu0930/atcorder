@@ -1,15 +1,17 @@
-#ColorfulBeans
-
 N=int(input())
 
-min_taste={}
+dict={}
 
-for _ in range(N):
-    a,c=map(int,input().split())
-
-    if c in min_taste:
-        min_taste[c]=min(min_taste[c],a)
+for i in range(N):
+    a,b=map(int,input().split())
+    if b in dict:
+        if dict[b] > a:
+            dict[b]=a
     else:
-        min_taste[c]=a
+        dict[b]=a
 
-print(max(min_taste.values()))
+
+    
+
+
+print(max(dict.values()))
